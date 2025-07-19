@@ -1,15 +1,80 @@
 <img src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner">
 <h1 align="center"><img src="./dashboard/images/logo-non-bg.png" width="22px"> Goat Bot - Bot Chat Messenger</h1>
 
-<p align="center">
-  <a href="https://nodejs.org/dist/v16.20.0">
-    <img src="https://img.shields.io/badge/Nodejs%20Support-16.x-brightgreen.svg?style=flat-square" alt="Nodejs Support v16.x">
-  </a>
-  <img alt="size" src="https://img.shields.io/github/repo-size/ntkhang03/Goat-Bot-V2.svg?style=flat-square&label=size">
-  <img alt="code-version" src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=code%20version&prefix=v&query=%24.version&url=https://github.com/ntkhang03/Goat-Bot-V2/raw/main/package.json&style=flat-square">
-  <img alt="visitors" src="https://visitor-badge.laobi.icu/badge?style=flat-square&page_id=ntkhang3.Goat-Bot-V2">
-  <img alt="size" src="https://img.shields.io/badge/license-MIT-green?style=flat-square&color=brightgreen">
-</p>
+## 👨‍💻 Development Team
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/ntkhang03">
+        <img src="https://avatars.githubusercontent.com/u/81167726?v=4" width="100px;" alt="NTKhang"/>
+        <br/>
+        <sub><b>NTKhang</b></sub>
+      </a>
+      <br/>
+      <span>Original Creator</span>
+    </td>
+    <td align="center">
+      <a href="https://github.com/xnil6x-obito">
+        <img src="https://avatars.githubusercontent.com/u/221610963?v=4" width="100px;" alt="XNIL6X"/>
+        <br/>
+        <sub><b>XNIL6X OBITO</b></sub>
+      </a>
+      <br/>
+      <span>Remodified & error Fix </span>
+    </td>
+  </tr>
+</table>
+
+
+
+## 🛠️ Command Configuration Structure
+
+```javascript
+module.exports = {  
+  config: {  
+    name: "command_name",                // 🔹 Command Name  
+    version: "1.0",                      // 🔸 Version  
+    author: "xnil6x",                    // 👨‍💻 Developer  
+    role: 4,                             // 🔐 Required Access Level  
+    usePrefix: true,                     // ⛓️ Prefix Requirement  
+    description: "Command Description",   // 📝 Functionality  
+    guide: "Usage Guide",                // 📘 Command Syntax  
+    category: "Utility",                 // 🧰 Function Category  
+    cooldowns: 3                         // ⏳ Execution Delay (seconds)  
+  }  
+};
+```
+
+---
+
+## 🔐 Role Hierarchy System
+
+| Level | Badge | Access Tier            | Description                  |
+|-------|-------|-----------------------|------------------------------|
+| 0     | 👥    | Standard User         | All regular members          |
+| 1     | ⚔️    | Group admin       | Chat administrators          |
+| 2     | 🤖    | Bot admin           | Bot configuration access     |
+| 3     | 💎    | Premium User          | VIP command privileges       |
+| 4     | 👑    | System Developer      | Full system control          |
+
+---
+
+## ℹ️ Framework Features
+
+### ⚙️ Configuration Options
+- **Prefix Control**  
+  → `usePrefix: true/false` for command trigger flexibility
+
+
+
+### ⏱️ Anti-Spam Protection
+- Cooldown system prevents command flooding
+- Adjustable timer per command
+
+---
+
+
 
 - [📝 **Note**](#-note)
 - [🚧 **Requirement**](#-requirement)
@@ -27,6 +92,7 @@
 - [📜 **License**](#-license)
 
 <hr>
+
 
 ## 📝 **Note**
 - This is a messenger chat bot using a personal account, using an [unofficial api](https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md) ([Origin here](https://github.com/Schmavery/facebook-chat-api)) and this may lead to facebook account being locked due to spam or other reasons. 
@@ -285,8 +351,6 @@ If you have major coding issues with this bot, please join and ask for help.
   <p><img src="https://i.ibb.co/G53JsXm/image.png" width="399px"></p>
 </details>
 
-## ✨ **Copyright (C)**
-- **[NTKhang (NTKhang03)](https://github.com/ntkhang03)**
 
 ## 📜 **License**
 
@@ -305,3 +369,6 @@ If you have major coding issues with this bot, please join and ask for help.
 - Don't claim my source code as your own
 - Do not monetize my source code (such as: buy and sell commands, buy and sell bots, call for donations, etc.)
 - Don't remove/edit my credits (author name) in my source code
+
+[ntkhang03](https://github.com/ntkhang03) | 
+Enhanced by [XNIL6X OBITO](https://github.com/xnil6x-obito)
