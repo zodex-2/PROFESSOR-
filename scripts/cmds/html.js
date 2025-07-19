@@ -3,21 +3,21 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports = {
- config: {
- name: "html",
- version: "1.0",
- author: "xnil6x",
- countDown: 3,
- role: 4,
- usePrefix: true,
- shortDescription: "Convert HTML to image",
- longDescription: "Send HTML and get back a rendered image using API",
- category: "utility",
- guide: {
- vi: "{p}{n} <html content>",
- en: "{p}{n} <html content>"
- }
- },
+  config: {
+    name: "html",
+    version: "1.0",
+    author: "xnil6x",
+    countDown: 3,
+    role: 3, // This is correct for premium-only
+    usePrefix: true,
+    shortDescription: "Convert HTML to image",
+    longDescription: "Send HTML and get back a rendered image using API",
+    category: "utility",
+    guide: {
+      en: "{p}{n} <html content>"
+    }
+  },
+
 
  onStart: async function ({ args, message }) {
  const html = args.join(" ");

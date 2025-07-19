@@ -10,11 +10,15 @@ function getType(obj) {
 function getRole(threadData, senderID) {
   const adminBot = global.GoatBot.config.adminBot || [];
   const developers = global.GoatBot.config.developers || [];
-	const premium = global.GoatBot.config.premium || [];
+  const premium = global.GoatBot.config.premium || [];
+  
   if (!senderID) return 0;
+  
   const adminBox = threadData ? threadData.adminIDs || [] : [];
-  return developers.includes(senderID) ? 3 : 
-		premium.includes(senderID) ? 4 : 
+  
+  // Check roles in order of highest to lowest priority
+  return developers.includes(senderID) ? 4 :
+    premium.includes(senderID) ? 3 :
     adminBot.includes(senderID) ? 2 :
     adminBox.includes(senderID) ? 1 : 0;
 }
@@ -31,6 +35,8 @@ function getText(type, reason, time, targetID, lang) {
 		return utils.getText({ lang, head: "handlerEvents" }, "onlyAdminBot");
 else if (type == "onlyDeveloper")
     return utils.getText({ lang, head: "handlerEvents" }, "onlyDeveloper");
+	else if (type == "onlyPremium")
+    return utils.getText({ lang, head: "handlerEvents" }, "onlyPremium");
 }
 
 function replaceShortcutInLang(text, prefix, commandName) {
@@ -296,24 +302,23 @@ module.exports = function (api, threadModel, userModel, dashBoardModel, globalMo
     return;
   }
 
-  // ————————————— CHECK PERMISSION ———————————— //
-  const roleConfig = getRoleConfig(utils, command, isGroup, threadData, commandName);
-  const needRole = roleConfig.onStart;
+			// ————————————— CHECK PERMISSION ———————————— //
+			const roleConfig = getRoleConfig(utils, command, isGroup, threadData, commandName);
+			const needRole = roleConfig.onStart;
 
-  if (needRole > role) {
-  if (!hideNotiMessage.needRoleToUseCmd) {
-    if (needRole == 1)
-      return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyAdmin", commandName));
-    else if (needRole == 2)
-      return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyAdminBot2", commandName));
-    else if (needRole == 3)
-      return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyDeveloper", commandName));
-		else if (needRole == 4)
-      return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyPremium", commandName));
-  }
-  return true;
-}
-
+			if (needRole > role) {
+				if (!hideNotiMessage.needRoleToUseCmd) {
+					if (needRole == 1)
+						return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyAdmin", commandName));
+					else if (needRole == 2)
+						return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyAdminBot2", commandName));
+					else if (needRole == 3)
+						return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyPremium", commandName));
+					else if (needRole == 4)
+						return await message.reply(utils.getText({ lang: langCode, head: "handlerEvents" }, "onlyDeveloper", commandName));
+				}
+				return true;
+			}
   // ———————————————— countDown ———————————————— //
   if (!client.countDown[commandName])
     client.countDown[commandName] = {};
