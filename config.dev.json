@@ -69,7 +69,7 @@
       "secretKey": "6Ldu4R0qAAAAAFauKulV8aV2Z8uowe1ujXG3K5iR"
     }
   },
-"dashBoard": {
+  "dashBoard": {
     "enable": true,
     "expireVerifyCode": 300000,
     "port": 3001
@@ -138,17 +138,17 @@
     "whiteListModeThread": false,
     "needRoleToUseCmd": false
   },
-"logEvents": {
-		"disableAll": false,
-		"message": true,
-		"message_reaction": true,
-		"message_unsend": true,
-		"message_reply": true,
-		"event": true,
-		"read_receipt": false,
-		"typ": false,
-		"presence": false
-	},
+  "logEvents": {
+    "disableAll": false,
+    "message": true,
+    "message_reaction": true,
+    "message_unsend": true,
+    "message_reply": true,
+    "event": true,
+    "read_receipt": true,
+    "typ": false,
+    "presence": false
+  },
   "optionsFca": {
     "forceLogin": true,
     "listenEvents": true,
@@ -157,9 +157,9 @@
     "logLevel": "error",
     "selfListen": true,
     "selfListenEvent": true,
-    "autoMarkDelivery": true,
+    "autoMarkDelivery": false,
     "autoReconnect": true,
-    "online": true,
+    "online": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   }
 }
