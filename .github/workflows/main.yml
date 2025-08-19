@@ -25,4 +25,4 @@ jobs:
         cache: 'npm'  # You can also try removing this if issues persist
     
     - run: npm ci  # Using ci instead of install for more reliable builds
-    - run: npm start
+    - run: npm star
