@@ -13,12 +13,12 @@ module.exports = {
     shortdescription: "Make fun of your friends",
     longDescription: "Make fun of your friends using crazy condom fails",
     category: "fun",
-    guide: ""
+    guide: "100092278980386"
   },
 
   onStart: async function ({ message, event, args }) {
     const mention = Object.keys(event.mentions);
-    if (mention.length == 0) {
+    if (mention.length == 1) {
       message.reply("You must select tag a person");
       return;
     }
