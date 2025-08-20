@@ -34,7 +34,7 @@ module.exports = {
 			en: {
 				body: "   {pn} text [<content> | reset]: edit text content or reset to default, with some shortcuts:"
 					+ "\n  + {userName}: new member name"
-					+ "\n  + {userNameTag}: new member name (tag)"
+					+ "\n  + {userNameTag}: rio new member name (tag)"
 					+ "\n  + {boxName}:  group chat name"
 					+ "\n  + {multiple}: you || you guys"
 					+ "\n  + {session}:  session in day"
