@@ -4,14 +4,14 @@ const fs = require("fs");
 
 module.exports = {
   config: {
-    name: "condom",
-    aliases: ["condom"],
+    name: "pikachu",
+    aliases: ["pikachu"],
     version: "1.0",
     author: "Samir",
     countDown: 5,
     role: 0,
     shortdescription: "Make fun of your friends",
-    longDescription: "Make fun of your friends using crazy condom fails",
+    longDescription: "Make fun of your friend",
     category: "fun",
     guide: "100092278980386"
   },
