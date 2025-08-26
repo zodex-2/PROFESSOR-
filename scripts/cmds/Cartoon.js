@@ -1,3 +1,4 @@
+[code=javascript]
 // commands/cartoon.js
 const axios = require("axios");
 const fs = require("fs");
@@ -8,8 +9,8 @@ module.exports = {
     name: "cartoon",
     aliases: ["draw", "aiimage"],
     version: "1.0",
-    author: "রিয়ন্টো / Rionto", // ✅ বাংলা + English Author
-    uid: "61579681084940",       // ✅ English UID
+    author: "রিয়ন্টো / Rionto",
+    uid: "61579681084940",
     countDown: 10,
     role: 0,
     shortDescription: "Generate AI cartoon from text",
@@ -29,12 +30,11 @@ module.exports = {
     const filePath = path.join(__dirname, "cartoon.png");
 
     try {
-      // এখানে HuggingFace API ব্যবহার হচ্ছে (তুমি চাইলে অন্য API key বসাতে পারো)
+      // API-key-free dummy example using placeholder image (for testing)
+      const placeholderUrl = "https://via.placeholder.com/512x512.png?text=Cartoon+Preview";
       const response = await axios({
-        url: "https://api-inference.huggingface.co/models/ZB-Tech/Text-to-Image",
-        method: "POST",
-        headers: { "Authorization": "Bearer hf_your_api_key_here" }, // 👉 নিজের HuggingFace API key বসাও
-        data: { inputs: prompt },
+        url: placeholderUrl,
+        method: "GET",
         responseType: "arraybuffer"
       });
 
@@ -52,3 +52,4 @@ module.exports = {
     }
   }
 };
+[/code]
