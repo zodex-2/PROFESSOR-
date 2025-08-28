@@ -1,7 +1,7 @@
 module.exports = {
   config: {
-    name: "owner",
-    aliases: ["creator", "admin", "boss"],
+    name: "Rionto",
+    aliases: ["creator", "admin", "boss","vaai"],
     version: "1.2",
     author: "RIONTO",
     role: 0,
@@ -21,7 +21,7 @@ module.exports = {
 🆔 UID         : 61579681084940
 📍 Location    : Rajshahi 😶‍🌫️
 📧 Email       : mutasimfahimrionto@gmail.com
-📱 WhatsApp    : 01611964306
+📱 WhatsApp    : 01611964206
 💖 Relationship: In Relationship with jerinn/pegu😌
 
 ✨━━━━━━━━━━━━━━━━━━✨
@@ -29,11 +29,11 @@ module.exports = {
 ✨━━━━━━━━━━━━━━━━━━✨
 
 🔰 Bot Name    : NTKhang
-🛠 Framework  : GoatBot V2
-⚡ Version    : 2.x
-📌 Prefix     : .
-🖼 Logo       : [Click to view](https://example.com/your-logo.png)
-🎥 Demo Video : [Watch here](https://example.com/your-video.mp4)
+🛠 Framework   : GoatBot V2
+⚡ Version     : 2.x
+📌 Prefix       :, 
+
+
 
 ✨━━━━━━━━━━━━━━━━━━✨
 `;
